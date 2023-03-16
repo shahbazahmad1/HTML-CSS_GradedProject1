@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --ff-heading: "Roboto", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+  background-color: rgb(69, 68, 68);
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(197, 194, 194);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(105, 102, 102);
+}
+h1,
+h2,
+h3,
+body,
+input {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  min-width: 500px;
+  display: grid;
+  place-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  width: 75%;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+}
+.card-heading {
+  font-size: 1.3rem;
+  font-family: var(--ff-heading);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* ----Details Section---- */
+.details {
+  font-family: var(--ff-heading);
+  width: 50%;
+  padding: 16px;
+  line-height: 1.5;
+  overflow-y: scroll;
+}
+.details [type="text"],
+.details [type="number"],
+.details [type="email"] {
+  border: none;
+  outline: none;
+  width: 40%;
+  line-height: 3;
+  border-bottom: 1px solid black;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.details select {
+  width: 30%;
+  border: none;
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.details [type="time"] {
+  margin-left: 1rem;
+}
+.date-time {
+  border: none;
+  border-bottom: 1px solid black;
+}
+/* ----Label---- */
+label {
+  font-size: 14px;
+}
+/* ----Image Section---- */
+.test-image {
+  width: 50%;
+}
+.test-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ----Buttons---- */
+.btn {
+  display: flex;
+  gap: 1.5rem;
+}
+.btn button {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 8px 46px;
+  color: white;
+  background: purple;
+  border: none;
+  border-radius: 8px;
+}
+.btn button:active {
+  color: rgb(8, 216, 8);
+}
+.btn button:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+}
+@media (max-width: 870px) {
+  .container {
+    height: 810px;
+    width: 450px;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+  .card-heading {
+    font-size: 16px;
+  }
+  .details {
+    order: 2;
+    width: 100%;
+    font-size: 12px;
+    overflow-y: scroll;
+  }
+  .details [type="text"],
+  .details [type="number"],
+  .details [type="email"] {
+    font-size: 14px;
+    width: 75%;
+  }
+ .test-image {
+    order: 1;
+    width: 100%;
+    height: 40%;
+  }
+  .test-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  label {
+    font-size: 14px;
+  }
+  .btn {
+    margin-top: 1.5rem;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 650px) {
+  body {
+    width: 412px;
+    height: 892px;
+    margin: 0 auto;
+    transform: scale(0.9);
+    transition: 1s transform ease;
+  }
+  .container {
+    top: 10px;
+    height: 750px;
+    width: 420px;
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lab Test</title>
+    <link rel="stylesheet" href="labTest.css" />
+  </head>
+  <body>
+    <div class="container">
+     
+      <div class="details">
+        <form action="">
+          <h2 class="card-heading">1.Your Contact Details</h2>
+          <input type="text" placeholder="Full name"  required  />
+          <input type="text" placeholder="Patient id if exists"  />
+          <input type="number" placeholder="Contact Number" required/>
+          <input type="email" placeholder="Email Id" required />
+
+          <h2 class="card-heading">2.Address</h2>
+          <input type="text" placeholder="H-No"  />
+          <input type="text" placeholder="Street" />
+          <input type="text" placeholder="Area" />
+
+          <h2 class="card-heading">District</h2>
+          <select name="Districy" id="">
+            <option value="" selected>Choose</option>
+            <option value="BLR">Bengaluru</option>
+            <option value="MYR">Mysuru</option>
+            <option value="DEL">Delhi</option>
+          </select>
+
+          <h2 class="card-heading">3.Choose the test type</h2>
+          <p>**Please check one box without fail**</p>
+          <input type="checkbox" id="c1" name="option1" value="CBC"/>
+          <label for="c1">CBC</label>
+          <br>
+          <input type="checkbox" id="c2" name="option2" value="Complete Urine"/>
+          <label for="c2">Complete Urine</label>
+          <br>
+          <input type="checkbox" id="c3" name="option3" value="Lipid Profile" />
+          <label for="c3">Lipid Profile</label>
+          <br>
+          <input type="checkbox" id="c4" name="option4" value="Thyroid Stimulating Hormone(TSH)" />
+          <label for="c4">Thyroid Stimulating Hormone(TSH)</label>
+          <br>
+          <input type="checkbox" id="c5" name="option5" value="Glucose Test"/>
+          <label for="c5">Glucose Test</label>
+
+          <h2 class="card-heading"> 4.Do you want a hard copy of the report also?</h2>
+          <label for="r1">Yes
+            <input type="radio" id="r1" name="choice" value="True" required />
+        </label>
+          <label for="r1">No
+          <input type="radio" id="r2" name="choice" value="False" />
+        </label>
+
+          <h2 class="card-heading">5.Select Your Comfortable Date and Time</h2>
+          <input type="date" class="date-time" required />
+          <input type="time" class="date-time" required />
+        </div>
+    
+        <div class="test-image">
+          <img src="Images/Lab-Test/lab-test.jpg" alt="" />
+        </div>
+      </div>
+      <div class="btn">
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
